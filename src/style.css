@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #050505;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    touch-action: none; /* Penting untuk mobile */
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: #111;
+    border: 2px solid #333;
+}
+
+canvas {
+    display: block;
+    background: #151515;
+}
+
+/* Menu */
+#start-menu {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#start-menu h1 { color: #900; font-size: 40px; margin: 0; text-shadow: 0 0 10px red; }
+#start-menu p { color: #bbb; margin-top: 10px; }
+
+#play-button {
+    margin-top: 25px;
+    padding: 12px 35px;
+    font-size: 20px;
+    background: #600;
+    color: white;
+    border: 2px solid #900;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+#play-button:hover { background: #900; transform: scale(1.05); }
+
+/* Mobile Controls */
+#mobile-controls {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-sizing: border-box;
+    z-index: 50;
+    pointer-events: none; /* Supaya tidak kacau klik lain */
+}
+
+#mobile-controls .ctrl-btn, #mobile-controls .action-btn { pointer-events: auto; }
+
+.hidden { display: none !important; }
+
+.ctrl-btn, .action-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: inherit;
+    touch-action: manipulation;
+}
+
+.ctrl-btn { width: 55px; height: 55px; font-size: 18px; }
+.action-btn { width: 90px; height: 50px; margin-bottom: 10px; font-size: 14px; }
+
+.d-pad { display: flex; flex-direction: column; align-items: center; }
+.horizontal-btns { display: flex; gap: 12px; margin-top: 6px; }
+.action-btns { display: flex; flex-direction: column; justify-content: center;}
+
+.ctrl-btn:active, .action-btn:active { background: rgba(255, 255, 255, 0.4); }
+
+#ui {
+    background: #000;
+    text-align: center;
+    padding: 8px;
+    border-top: 1px solid #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#status-text { margin: 0; font-size: 14px; }

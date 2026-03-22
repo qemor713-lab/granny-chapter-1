@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Granny 2D - Kunci Khas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="start-menu">
+            <h1>GRANNY 2D</h1>
+            <h2>Welcome to the granny chapter 1</h2>
+            <button id="play-button">PLAY</button>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="mobile-controls" class="hidden">
+            <div class="d-pad">
+                <button id="btn-w" class="ctrl-btn">W</button>
+                <div class="horizontal-btns">
+                    <button id="btn-a" class="ctrl-btn">A</button>
+                    <button id="btn-s" class="ctrl-btn">S</button>
+                    <button id="btn-d" class="ctrl-btn">D</button>
+                </div>
+            </div>
+            <div class="action-btns">
+                <button id="btn-o" class="action-btn">O (Lampu)</button>
+                <button id="btn-e" class="action-btn">E (Pintu)</button>
+            </div>
+        </div>
+
+        <div id="ui">
+            <p id="status-text">Misi: Cari Kunci Khas!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
